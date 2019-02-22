@@ -2,12 +2,47 @@
 .main-header {
     font-size: 1.6rem;
     background: @nav-bg;
-
+    color: @nav-font;
+    width: 100%;
+    border-bottom: 1px solid darken(@nav-bg, 10%);
+    .Flex(column, flex-end, center);
     h1 {
         font-size: 3.6rem;
     }
 
     .navigator {
-        .Flex();
-    }   
+        .Flex(row, space-between, center);
+        width: 50%;
+        a {
+            padding: 10px 10px;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                background: darken(@nav-bg, 20%);
+            }
+        }
+    }
+    @media @phone {
+        .navigator {
+            width: 100%;
+            a {
+                &:hover {
+
+                }
+            }
+        }
+    } 
+
+    @media @tablet {
+        .navigator {
+            width: 75%;
+            a {
+                &:hover {
+                    
+                }
+            }
+        }
+    }
 }
