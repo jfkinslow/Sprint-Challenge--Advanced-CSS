@@ -301,6 +301,9 @@ footer {
   font-weight: bold;
   border-radius: 5px;
 }
+.home .walk .walk-text .btn:hover {
+  background: #48547a;
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
