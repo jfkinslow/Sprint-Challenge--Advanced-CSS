@@ -1,1 +1,59 @@
 // Navigation code here
+
+.main-header {
+    font-size: 1.6rem;
+    background: @nav-bg;
+    color: @nav-font;
+    width: 100%;
+    border-bottom: 1px solid darken(@nav-bg, 10%);
+    .Flex(column, flex-end, center);
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    .navigator {
+        .Flex(row, space-between, center);
+        width: 100%;
+
+        a {
+            .Button(100%, 100%, 10px 20px, 0, @nav-bg, black, center, 1.6rem, bold, 5px);
+            text-decoration: none;
+            
+            &:hover {
+                background: darken(@nav-bg, 20%);
+            }
+            
+        }
+    }
+    
+    @media (min-width: 815px) {
+        .navigator {
+            max-width: 600px;
+        }
+    }
+    @media @phone {
+        .navigator {
+            width: 100%;
+            a {
+                font-size: 1.2rem;
+                width: 50%;
+                &:hover {
+
+                }
+            }
+        }
+    } 
+
+    @media @tablet {
+        .navigator {
+            width: 100%;
+            a {
+                font-size: 1.2rem;
+                width: 75%;
+                &:hover {
+                    
+                }
+            }
+        }
+    }
+}
